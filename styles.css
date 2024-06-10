@@ -144,7 +144,7 @@ footer {
     margin-right: 10px;
 }
 .skills-list li:hover, .experience-list li:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 /* Стили для ссылок */
