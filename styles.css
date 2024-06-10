@@ -1,0 +1,190 @@
+/* Основные стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to right, #f4f4f4, #e8e8e8); /* Градиентный фон */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-attachment: fixed; /* Фиксированный фон */
+}
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #77a1d3 3px solid;
+}
+header #branding {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Добавлено выравнивание по пространству */
+}
+header #profile-photo {
+    width: 150px; /* Размер фото */
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 10px 20px;
+    background: #77a1d3;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+header a:hover {
+    background: #79cbca;
+    transform: scale(1.05);
+}
+header ul {
+    padding: 0;
+    list-style: none;
+    display: flex; /* Сделать список горизонтальным */
+    gap: 10px; /* Расстояние между кнопками */
+}
+header li {
+    display: inline;
+}
+header #branding h1 {
+    margin: 0;
+    font-weight: 700;
+}
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+header::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+section {
+    padding: 20px 0;
+}
+.dark {
+    padding: 15px;
+    background: #333;
+    color: #fff;
+    border-radius: 5px;
+}
+.box {
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон для блока */
+    color: #333;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 2px solid #77a1d3; /* Рамка вокруг контейнеров */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анимация при наведении */
+}
+.box:hover {
+    transform: scale(1.02); /* Увеличение при наведении */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Более сильная тень при наведении */
+}
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #333;
+    text-align: center;
+    border-top: #77a1d3 3px solid;
+    border-radius: 0 0 5px 5px;
+}
+
+/* Стили для showcase секции */
+#showcase {
+    background: linear-gradient(to right, #77a1d3, #79cbca, #e684ae);
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+}
+#showcase h1 {
+    font-size: 2.5em;
+    margin: 0;
+    padding: 0;
+}
+
+/* Стили для списков */
+.skills-container {
+    display: flex;
+    justify-content: center; /* Центрирование контейнера */
+    gap: 50px; /* Разделение колонок */
+}
+.skills-list, .experience-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.skills-list li, .experience-list li {
+    background: #77a1d3;
+    color: #fff;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Анимация при наведении */
+}
+.skills-list li {
+    background: #79cbca;
+}
+.skills-list li::before, .experience-list li::before {
+    content: "•";
+    color: #fff;
+    margin-right: 10px;
+}
+.skills-list li:hover, .experience-list li:hover {
+    transform: scale(1.05); /* Увеличение при наведении */
+}
+
+/* Стили для ссылок */
+#contacts a {
+    color: #77a1d3;
+    text-decoration: none;
+    font-weight: 700;
+}
+#contacts a:hover {
+    color: #333;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    header {
+        text-align: center;
+    }
+    header #branding, header nav {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+    header #profile-photo {
+        margin: 0 auto 10px;
+    }
+    header ul {
+        display: block; /* Сделать список вертикальным */
+    }
+    header li {
+        display: block;
+        margin: 10px 0; /* Отступы между кнопками */
+    }
+    .skills-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .box {
+        margin: 10px 0;
+    }
+}
